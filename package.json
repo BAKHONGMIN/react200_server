@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "client": "cd client && yarn start",
     "server": "nodemon ./server/server.js",
-    "dev": "yarn server & yarn client"
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "axios": "^1.4.0",
